@@ -4,6 +4,7 @@ import TodoList from './components/TodoComponents/TodoList';
 import Todo from './components/TodoComponents/Todo';
 
 import './components/TodoComponents/Todo.css';
+import { isTemplateElement } from '@babel/types';
 
 class App extends React.Component {
   // you will need a place to store your state in this component.
@@ -44,6 +45,16 @@ class App extends React.Component {
     })
   }
 
+  handleDelete = (event) => {
+    event.preventDefault()
+
+    this.setState({
+      todoList: this.state.todoList.filter(todo => {
+        return !todo.completed
+      })
+    })
+  }
+
   render() {
     return (
       <div>
@@ -52,6 +63,7 @@ class App extends React.Component {
           <TodoList key={todo.id} todoList={todo} onClick={e => this.handleChange(e, todo.id)} />
         ))}
         <TodoForm addTodo={this.addTodo} />
+        <button onClick={this.handleDelete} className='delete-btn'>Delete Items</button>
       </div>
     );
   }
