@@ -28,7 +28,7 @@ class TodoForm extends React.Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form className='main-form' onSubmit={this.handleSubmit}>
                 <input
                     type='text'
                     value={this.state.inputValue}

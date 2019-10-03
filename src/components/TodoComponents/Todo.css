@@ -1,7 +1,33 @@
 .todo {
+    display: flex;
+    align-items: center;
     margin: 15px auto;
+    background-color: blue;
+    padding-left: 5px;
+    color: white;
+    border: 1px solid black;
+    width: 30%;
+    height: 35px;
 }
 
 .todo.completed {
     text-decoration: line-through;
+    background-color: lightcoral;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 1200px;
+    margin: 30px auto;
+}
+
+.main-form {
+    margin: 0 auto;
+}
+
+.delete-btn {
+    width: 15%;
+    margin: 15px auto;
 }
