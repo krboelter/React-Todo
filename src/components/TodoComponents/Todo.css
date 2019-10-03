@@ -1,0 +1,7 @@
+.todo {
+    margin: 15px auto;
+}
+
+.todo.completed {
+    text-decoration: line-through;
+}
