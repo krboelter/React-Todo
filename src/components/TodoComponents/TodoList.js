@@ -1,2 +1,15 @@
-// your components will all go in this `component` directory.
-// feel free to change this component.js into TodoList.js
+import React from 'react';
+import { SSL_OP_DONT_INSERT_EMPTY_FRAGMENTS } from 'constants';
+
+const TodoList = (props) => {
+    return(
+        <div
+            key={props.todoList.id}
+            className={`todo${props.todoList.completed ? ' completed' : ""}`}
+            onClick={props.onClick}
+        >{props.todoList.task}
+        </div>
+    )
+}   
+
+export default TodoList
